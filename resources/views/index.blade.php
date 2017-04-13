@@ -1,4 +1,5 @@
-<?php
-echo "<pre>";
-dd($users);
-?>
+@extends('layabouts.home')
+	
+@section('content')
+	
+@endsection
