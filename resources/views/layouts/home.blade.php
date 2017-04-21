@@ -26,7 +26,9 @@
 										Tìm theo</span> <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="danh-muc_bai-giang-dien-tu.htm#contains" data-id="9bc0cb57-d4f9-4644-a957-023fb8bab662">Kinh Doanh Marketing</a></li>
+								@foreach($categories as $category)
+									<li><a href="" data-id="9bc0cb57-d4f9-4644-a957-023fb8bab662">{{$category->name}}</a></li>
+								@endforeach
 								</ul> 
 							</div>
 							<input type="hidden" name="ctl00$userControlHeader$hdfSearchParam" id="userControlHeader_hdfSearchParam" value="0" />
@@ -39,9 +41,12 @@
 					</div>
 					<div>
 						<div class="b-header-3">
+						@if (Route::has('login'))
+							@if (Auth::check())
+							@else
 							<ul class="b-header-3__user pull-right">
 								<li class="b-header-3__user-name pull-right">
-									<a href="javascript:void(0)" class="b-header-3__user-link clearfix" title="Thông Tin Tài Khoản">
+									<a href="#" class="b-header-3__user-link clearfix" title="Thông Tin Tài Khoản">
 										<img width="34" height="34" class="b-header-3__user-avatar" src="Images/Icons/avartar.png" /><!-- alt="Khoaluan.vn - Thư viện tài liệu số trực tuyến"  -->
 										<ul class="b-header-3__user-text">
 											<li class="b-header-3__user-text-name"><span class="b-header-3__user-short-name">Đăng nhập</span></li>
@@ -53,7 +58,7 @@
 										<ul class="b-header-3__user-dropdown arrow_top">
 											<li id="dd-new-account" class="b-header-3__user-dropdown__item">
 												<div id="socialLoginList">
-													<a href="danh-muc_bai-giang-dien-tu.htm#" data-toggle="modal" data-target=".modalLogin" name="btn_Hibook" title="Đăng Nhập" class="loginList btn_Hibook"></a>
+													<a href="{{ url('/login') }}" class="loginList">Đăng nhập</a>
 													<button type="submit" class="loginList btn_Google" name="provider" value="Google"
 														title="Đăng nhập bằng tài khoản Google của bạn.">
 													</button>
@@ -75,6 +80,8 @@
 									</div>
 								</li>
 							</ul>
+							@endif
+						@endif
 						</div>
 					</div>
 				</div>
