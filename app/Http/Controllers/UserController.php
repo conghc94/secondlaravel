@@ -11,8 +11,6 @@ class UserController extends BaseController
 {
 	public function index()
 	{
-		$users = \DB::select('select * from users where id =?',[1]);
-		//print_r($users);exit;
 		return view('index',compact('users'));
 	} 	   
 }
