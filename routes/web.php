@@ -14,7 +14,9 @@
 // Route::get('/index', function () {
 //     return view('welcome');
 // });
-Route::get('/',['as' => 'index', 'uses' => 'IndexController@index']);
+Route::get('/index',['as' => 'index', 'uses' => 'IndexController@index']);
+Route::get('/detail-document/{id?}',['as' => 'detail-document', 'uses' => 'IndexController@detailDocument']);
+Route::get('/detail-category/{id?}',['as' => 'detail-category', 'uses' => 'IndexController@detailCategory']);
 Route::get('/demo', ['as'=>'','uses' =>'UserController@index']);
 Auth::routes();
 

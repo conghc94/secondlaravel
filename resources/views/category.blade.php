@@ -6,7 +6,7 @@
 			<div class="panel panel-primary" style="border: 0px;">
 				<div class="panel-heading">
 					<h3 class="panel-title">
-
+						{{$item_category['name']}}
 					</h3>
 				</div>
 				<div class="panel-body text-justify">
@@ -16,7 +16,8 @@
 						</div>
 						<div>
 							<span style="text-align: justify !important; line-height: 1.7;">
-								
+								{{$item_category['description']}}
+						
 							</span>
 						</div>
 					</div>
@@ -29,7 +30,7 @@
 			<div class="row">
 				<div class="col-md-4 col-xs-4 col-thin">
 					<div class="NewDocument" title='Bài giảng điện tử Công nghệ lớp 11 - Bài 6'>
-						<a href=''>
+						<a href='http://www.khoaluan.vn/tai-lieu_bai-giang-dien-tu-cong-nghe-lop-11-bai-6_1052793'>
 							<img src='Thumnails/00000000-0000-0000-0000-000000000000/250/137cb842-93af-4315-856c-8d85f72a21c3.png' style="display: inline-block; width: 100%; height: 190px;" alt='Bài giảng điện tử Công nghệ lớp 11 - Bài 6'>
 							<div class="detailDocument">
 								Bài giảng điện tử Công nghệ lớp 11 - Bài...
@@ -71,25 +72,25 @@
 					<!-- </ul> -->
 				</div>
 			</div>
-			@foreach($all_documents as $item_document)
+			@foreach($all_documents as $document_item)
 			<div class="row documentItem">
 				<div class="col-md-3 col-xs-3 col-thin">
 					<a href="http://www.khoaluan.vn/tai-lieu_bai-giang-dien-tu-cong-nghe-lop-11-bai-6_1052793" class="img"><img class="img-thumbnail" style="width: 140px; height: 150px" title='Bài giảng điện tử Công nghệ lớp 11 - Bài 6' alt='Bài giảng điện tử Công nghệ lớp 11 - Bài 6' src='Thumnails/00000000-0000-0000-0000-000000000000/130/137cb842-93af-4315-856c-8d85f72a21c3.png'></a>
 				</div>
 				<div class="col-md-9 col-xs-9 col-thin">
 					<div>
-						<a class="list_title" href="http://www.khoaluan.vn/tai-lieu_bai-giang-dien-tu-cong-nghe-lop-11-bai-6_1052793">{{$item_document->title}}</a>
+						<a class="list_title" href="http://www.khoaluan.vn/tai-lieu_bai-giang-dien-tu-cong-nghe-lop-11-bai-6_1052793">{{$document_item->title}}</a>
 					</div>
 						<div class="moreInformation">
-							<div class="list_size"><span class="title_list_moreInformation">Dung lượng: </span>{{$item_document->size}}</div>
-							<div class="list_type"><span class="title_list_moreInformation">Kiểu file: </span>{{$item_document->type}}</div>
-							<div class="list_viewcount"><span class="title_list_moreInformation">Lượt xem: </span>{{$item_document->view_count}}</div>
-							<div class="list_downloadcount"><span class="title_list_moreInformation">Lượt tải: </span>{{$item_document->dowload_count}}</div>
+							<div class="list_size"><span class="title_list_moreInformation">Dung lượng: </span>{{$document_item->size}}</div>
+							<div class="list_type"><span class="title_list_moreInformation">Kiểu file: </span>{{$document_item->type}}</div>
+							<div class="list_viewcount"><span class="title_list_moreInformation">Lượt xem: </span>{{$document_item->view_count}}</div>
+							<div class="list_downloadcount"><span class="title_list_moreInformation">Lượt tải: </span>{{$document_item->dowload_count}}</div>
 					  	</div>
 				<div class='list_description'>
-					<span style="color: #0096d6;"></span>{{$item_document->description_document}}.
+					<span style="color: #0096d6;"></span>{{$document_item->description_document}}.
 				</div>
-				<div  class="list_category" >Mục: <a href="http://www.khoaluan.vn/danh-muc_bai-giang-dien-tu_cong-nghe-ky-thuat">{{$item_document->name_category}}</a></div>
+				<div  class="list_category" >Mục: <a href="http://www.khoaluan.vn/danh-muc_bai-giang-dien-tu_cong-nghe-ky-thuat">{{$document_item->name_category}}</a></div>
 			   </div>
 			</div>
 			@endforeach
